@@ -17,5 +17,10 @@ class Profile extends Model
         'hobby' => 'required',
         'introduction' => 'required',
     );
+        // News Modelに関連付けを行う
+    public function histories()
+    {
+        return $this->hasMany('App\Models\History');
+    }
     
 }
